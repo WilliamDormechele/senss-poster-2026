@@ -417,9 +417,44 @@
 
     .contact-card {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 1rem;
       align-items: start;
+    }
+
+    .evidence-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: .9rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .evidence-item {
+      padding: 1rem;
+      border-radius: 18px;
+      background: var(--soft);
+      border: 1px solid rgba(219,227,238,.9);
+    }
+
+    .evidence-item dt {
+      font-weight: 900;
+      color: var(--blue-dark);
+      margin-bottom: .35rem;
+    }
+
+    .evidence-item dd {
+      margin: 0;
+      color: #344257;
+      font-size: .94rem;
+    }
+
+    .note-box {
+      border-left: 5px solid var(--teal);
+      background: #f3fbf8;
+      padding: 1rem 1.1rem;
+      border-radius: 16px;
+      color: #314154;
     }
 
     .small { font-size: .93rem; color: var(--muted); }
@@ -456,6 +491,7 @@
       .brand img { width: 76px; }
       .logo-row { align-items: flex-start; flex-direction: column; }
       .logo-row img { max-width: 72%; }
+      .evidence-list { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -477,6 +513,7 @@
         <a href="#findings">Findings</a>
         <a href="#design">Next phase</a>
         <a href="#figures">Figures</a>
+        <a href="#evidence">Selected evidence</a>
         <a href="#download">Download</a>
         <a href="#contact">Contact</a>
       </div>
@@ -639,6 +676,70 @@
       </figure>
     </section>
 
+    <section id="evidence" aria-labelledby="evidence-title">
+      <div class="section-head">
+        <div class="section-kicker">Selected review evidence</div>
+        <h2 id="evidence-title">A curated evidence summary — not a full table dump.</h2>
+      </div>
+
+      <div class="grid-2">
+        <article class="card accent">
+          <h3>Why only selected evidence is shown</h3>
+          <p>
+            The landing page is designed as a digital companion to the poster, not a full manuscript repository. It highlights the evidence most relevant to the poster story: growth in predictive analytics, weak implementation maturity, limited decision pathways, and the need for stakeholder-informed decision support.
+          </p>
+          <p class="note-box">
+            Full supplementary tables can be shared separately where appropriate, but the conference-facing page should remain visual, focused and easy to scan.
+          </p>
+        </article>
+
+        <article class="card teal">
+          <h3>Core evidence dimensions from the scoping review</h3>
+          <dl class="evidence-list">
+            <div class="evidence-item">
+              <dt>Evidence base</dt>
+              <dd>161 peer-reviewed studies using predictive analytics with routine or population health data.</dd>
+            </div>
+            <div class="evidence-item">
+              <dt>Implementation maturity</dt>
+              <dd>Most studies remained at model-development stage, with limited validation or operational deployment.</dd>
+            </div>
+            <div class="evidence-item">
+              <dt>Decision pathway</dt>
+              <dd>Few studies clearly described how predictive outputs would inform real planning decisions.</dd>
+            </div>
+            <div class="evidence-item">
+              <dt>System gap</dt>
+              <dd>The main limitation is not just model performance, but weak translation into governance, workflow and accountability structures.</dd>
+            </div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="grid-3" style="margin-top: 1rem;">
+        <article class="card">
+          <h3>Data integration</h3>
+          <p>
+            The review examined whether studies used single or multiple data sources and how data were linked, integrated or reported. This matters because decision support depends on trustworthy data architecture, not only modelling technique.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Governance and uncertainty</h3>
+          <p>
+            The review assessed reporting of governance, privacy protection, uncertainty, missing data and calibration. These features shape whether predictive outputs can be trusted and responsibly used.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Decision-support relevance</h3>
+          <p>
+            The review mapped whether models were linked to facility management, district or regional planning, or national policy. This helped define the PhD gap and the next empirical phase.
+          </p>
+        </article>
+      </div>
+    </section>
+
     <section id="download" aria-labelledby="download-title">
       <div class="section-head">
         <div class="section-kicker">Poster materials</div>
@@ -668,13 +769,23 @@
             University of East Anglia<br />
             South and East Network for Social Sciences Annual Conference
           </p>
-          <!-- Replace the email address below with your preferred public UEA research email before publishing. -->
           <p><strong>Email:</strong> <a href="mailto:w.dormechele@uea.ac.uk">w.dormechele@uea.ac.uk</a></p>
         </article>
+
+        <article class="card">
+          <h3>Supervision and acknowledgements</h3>
+          <p class="small">
+            This PhD project is supervised at the University of East Anglia. I gratefully acknowledge the guidance of Dr Beatriz De La Iglesia and my wider supervisory team, and the support of SENSS.
+          </p>
+          <p class="small">
+            Supervisors are acknowledged for academic guidance; the poster and landing page are presented by William Dormechele for the SENSS Annual Conference poster competition.
+          </p>
+        </article>
+
         <article class="card">
           <h3>Responsible sharing note</h3>
           <p class="small">
-            This page shares a poster summary and non-confidential research outputs only. It does not include raw HDSS data, identifiable information, stakeholder transcripts or confidential governance documents.
+            This page shares a poster summary and non-confidential research outputs only. It does not include raw HDSS data, identifiable information, stakeholder transcripts, ethics documents or confidential governance materials.
           </p>
         </article>
       </div>
