@@ -1,0 +1,26 @@
+# Git commands for publishing the SENSS poster landing page
+# Run these commands inside the senss_poster_landing_page folder after creating
+# a new public GitHub repository called senss-poster-2026.
+
+# 1. Initialise Git in this folder
+git init
+
+# 2. Add all files
+git add .
+
+# 3. Commit the website files
+git commit -m "Create SENSS poster landing page"
+
+# 4. Rename the default branch to main
+git branch -M main
+
+# 5. Connect to your GitHub repository
+# Replace YOUR-GITHUB-USERNAME with your real GitHub username.
+git remote add origin https://github.com/YOUR-GITHUB-USERNAME/senss-poster-2026.git
+
+# 6. Push to GitHub
+git push -u origin main
+
+# 7. Then enable GitHub Pages in GitHub:
+# Settings -> Pages -> Build and deployment -> Source: Deploy from a branch
+# Branch: main -> Folder: /root -> Save
