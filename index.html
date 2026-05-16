@@ -447,7 +447,12 @@
     }
 
     .callout h2, .callout p { position: relative; z-index: 1; }
-    .callout p { color: rgba(255,255,255,.91); max-width: 72ch; }
+
+    .callout p {
+      color: rgba(255,255,255,.91);
+      max-width: none;
+      width: 100%;
+    }
 
     .download-panel {
       display: grid;
@@ -543,10 +548,10 @@
   <header class="site-header" aria-label="Site header">
     <nav class="nav" aria-label="Primary navigation">
       <a class="brand" href="#top" aria-label="Home">
-        <img src="assets/senss-logo.png" alt="SENSS logo" />
+        <!-- <img src="assets/senss-logo.png" alt="SENSS logo" /> -->
         <span>
-          <strong>SENSS Annual Conference Poster</strong>
-          <span>Digital companion page</span>
+          <strong>William Dormechele</strong>
+          <span>Poster companion page . SENSS Annual Conference</span>
         </span>
       </a>
       <div class="nav-links" aria-label="Page links">
@@ -563,10 +568,10 @@
 
   <div id="top" class="hero">
     <div>
-      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> PhD researcher · University of East Anglia</span>
-      <h1>Predictive analytics is growing. Decision support is still missing.</h1>
+      <span class="eyebrow"><span class="dot" aria-hidden="true"></span> William Dormechele · PhD researcher · University of East Anglia</span>
+      <h1>Predictive analytics is growing, but usable decision support remains limited.</h1>
       <p class="lead">
-        This research examines how predictive analytics using routine and population health data can move beyond model development and become usable decision support for health-system planning in resource-limited settings.
+        This research examines how predictive analytics using routine and population health data can move beyond model development to support planning, resource allocation and learning in resource-limited health systems.
       </p>
       <div class="hero-actions">
         <a class="button primary" href="poster.pdf" target="_blank" rel="noopener">Download the poster PDF</a>
@@ -592,7 +597,7 @@
     <section id="summary" aria-labelledby="summary-title">
       <div class="section-head">
         <div class="section-kicker">Research focus</div>
-        <h2 id="summary-title">The project links evidence mapping, stakeholder-defined priorities, predictive modelling and decision-support translation.</h2>
+        <h2 id="summary-title">The project links evidence mapping, stakeholder-defined priorities, predictive modelling and decision support translation</h2>
       </div>
 
       <div class="grid-2">
@@ -629,7 +634,7 @@
     <section id="findings" aria-labelledby="findings-title">
       <div class="section-head">
         <div class="section-kicker">Completed deliverable</div>
-        <h2 id="findings-title">The scoping review shows a translation gap: predictive models are being built, but decision pathways are rarely defined.</h2>
+        <h2 id="findings-title">The scoping review shows a translation gap: predictive models are being built, but decision pathways are rarely defined</h2>
       </div>
 
       <div class="grid-2">
@@ -658,7 +663,7 @@
     <section id="design" aria-labelledby="design-title">
       <div class="section-head">
         <div class="section-kicker">Empirical design</div>
-        <h2 id="design-title">The next phase will test a pathway from longitudinal population data to stakeholder-informed decision support.</h2>
+        <h2 id="design-title">The next phase will test a pathway from longitudinal population data to stakeholder-informed decision support</h2>
       </div>
 
       <div class="timeline" aria-label="Project design steps">
@@ -679,7 +684,7 @@
         </article>
         <article class="step">
           <div class="step-num">4</div>
-          <h3>Decision-support translation</h3>
+          <h3>Decision support translation</h3>
           <p>Interpret outputs with stakeholders to assess usability, barriers, enablers and planning relevance.</p>
         </article>
       </div>
@@ -689,7 +694,7 @@
       <div class="callout">
         <h2 id="contribution-title">Contribution</h2>
         <p>
-          The project shifts the question from “Can we build predictive models?” to “How can predictive outputs become usable, accountable and context-sensitive decision-support for health-system planning?”
+          The project shifts the question from <b>“Can we build predictive models?”</b> to <b>“How can predictive outputs become usable, accountable and context-sensitive decision support for health-system planning?”</b>
         </p>
       </div>
     </section>
@@ -697,7 +702,7 @@
     <section id="figures" aria-labelledby="figures-title">
       <div class="section-head">
         <div class="section-kicker">Key figures</div>
-        <h2 id="figures-title">Key figures underpinning the poster argument.</h2>
+        <h2 id="figures-title">Key figures underpinning the poster argument</h2>
       </div>
 
       <div class="figure-grid">
@@ -713,21 +718,21 @@
 
       <figure style="margin-top: 1rem;">
         <img src="assets/figure-sankey.png" alt="Sankey diagram linking data sources, integration patterns and decision levels" />
-        <figcaption>Data sources, integration patterns and decision levels: showing the link between data architecture and decision-support contexts.</figcaption>
+        <figcaption>Data sources, integration patterns and decision levels: showing the link between data architecture and decision support contexts.</figcaption>
       </figure>
     </section>
 
     <section id="evidence" aria-labelledby="evidence-title">
       <div class="section-head">
         <div class="section-kicker">Selected review evidence</div>
-        <h2 id="evidence-title">A curated summary of the scoping review evidence.</h2>
+        <h2 id="evidence-title">Selected scoping review evidence</h2>
       </div>
 
       <div class="grid-2">
         <article class="card accent">
-          <h3>Why this page is curated</h3>
+          <h3>Why this companion page is selective</h3>
           <p>
-             This digital companion page is designed as a focused extension of the poster. It highlights the evidence most relevant to the poster argument: rapid growth in predictive analytics, limited implementation maturity, weak decision pathways and the need for stakeholder-informed decision support.
+             This digital companion page extends the poster by highlighting the evidence most relevant to its core argument: predictive analytics is expanding, but implementation maturity, decision pathways and stakeholder-informed translation remain limited.
           </p>
           <p class="note-box">
             Detailed supplementary tables and manuscript materials can be shared separately where appropriate. This page remains visual, selective and easy to navigate.
@@ -743,15 +748,15 @@
             </div>
             <div class="evidence-item">
               <dt>Implementation maturity</dt>
-              <dd>149 of 161 studies remained at the model-development stage, with limited validation or operational deployment.</dd>
+              <dd>Most studies (149/161) remained at model-development stage, with limited validation or operational deployment.</dd>
             </div>
             <div class="evidence-item">
               <dt>Decision pathway</dt>
-              <dd>Only a small minority clearly described how predictive outputs would inform real planning decisions.</dd>
+              <dd>Few studies clearly described how predictive outputs would inform planning decisions.</dd>
             </div>
             <div class="evidence-item">
               <dt>System gap</dt>
-              <dd>The limitation is not model performance alone, but weak translation into governance, workflow and accountability structures.</dd>
+              <dd>The key limitation is not model performance alone, but weak translation into governance, workflow and accountability structures.</dd>
             </div>
           </dl>
         </article>
@@ -773,7 +778,7 @@
         </article>
 
         <article class="card">
-          <h3>Decision-support relevance</h3>
+          <h3>Decision support relevance</h3>
           <p>
             The review mapped whether models were positioned for facility management, district or regional planning, or national policy. This helped define the research gap and the next empirical phase of the PhD.
           </p>
@@ -784,13 +789,13 @@
     <section id="download" aria-labelledby="download-title">
       <div class="section-head">
         <div class="section-kicker">Poster materials</div>
-        <h2 id="download-title">Download or revisit the poster after the conference.</h2>
+        <h2 id="download-title">Download and revisit the poster</h2>
       </div>
 
       <div class="card download-panel">
         <div>
-          <h3>SENSS Annual Conference Poster PDF</h3>
-          <p class="small">A2 landscape poster summarising the project aim, completed scoping review deliverable, research gap and empirical design.</p>
+          <h3>SENSS Annual Conference (2026) Poster PDF</h3>
+          <p class="small">A2 landscape poster summarising the project aim, scoping review findings, research gap and empirical design.</p>
         </div>
         <a class="button primary" href="poster.pdf" target="_blank" rel="noopener">Open poster PDF</a>
       </div>
@@ -798,8 +803,8 @@
 
     <section id="contact" aria-labelledby="contact-title">
       <div class="section-head">
-        <div class="section-kicker">Researcher</div>
-        <h2 id="contact-title">Contact and affiliation.</h2>
+        <div class="section-kicker">Poster Presenter</div>
+        <h2 id="contact-title">Contact and affiliations</h2>
       </div>
 
       <div class="contact-card">
@@ -808,26 +813,29 @@
           <p>
             Postgraduate Researcher<br />
             University of East Anglia<br />
-            South and East Network for Social Sciences (SENSS) Annual Conference
+            South and East Network for Social Sciences (SENSS)<br />
+            Poster presented at the SENSS Annual Conference
           </p>
-          <p><strong>Email:</strong> <a href="mailto:w.dormechele@uea.ac.uk">w.dormechele@uea.ac.uk</a></p>
-          <p><strong>LindedIn:</strong> <a href="https://www.linkedin.com/in/dormechele-william/">LinkedIn</a></p>
-          <p><strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-4041-2555" target="_blank" rel="noopener">0000-0003-4041-2555</a></p>
-          <p><strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=E1kZKF4AAAAJ&hl=en" target="_blank" rel="noopener">View profile</a></p>
+          <p>
+            <strong>Email:</strong> <a href="mailto:w.dormechele@uea.ac.uk">w.dormechele@uea.ac.uk</a><br />
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/dormechele-william/">LinkedIn</a><br />
+            <strong>ORCID:</strong> <a href="https://orcid.org/0000-0003-4041-2555" target="_blank" rel="noopener">0000-0003-4041-2555</a><br />
+            <strong>Google Scholar:</strong> <a href="https://scholar.google.com/citations?user=E1kZKF4AAAAJ&hl=en" target="_blank" rel="noopener">View profile</a>
+          </p>
         </article>
 
         <article class="card">
           <h3>Supervision and acknowledgements</h3>
           <p class="small">
-            This PhD project is supervised at the University of East Anglia. I gratefully acknowledge the guidance of my supervisory team, including <b>Dr Pinar Guven-Uslu</b> and <b>Prof Beatriz De La Iglesia</b>, and the support of SENSS.
+            This PhD project is supervised at the University of East Anglia by <b>Dr Pinar Guven-Uslu</b> and <b>Prof Beatriz De La Iglesia</b>. I gratefully acknowledge their academic guidance, and the support of the <b>SENSS/ESRC Doctoral Training Partnership</b> and the <b>Navrongo Health Research Centre</b>.
           </p>
           <p class="small">
-            Supervisors are acknowledged for academic guidance; the poster and digital companion page are presented by William Dormechele for the SENSS Annual Conference poster competition.
+            This poster and digital companion page are presented by William Dormechele for the SENSS Annual Conference poster competition.
           </p>
         </article>
 
         <article class="card">
-          <h3>Responsible sharing note</h3>
+          <h3>Responsible dissemination note</h3>
           <p class="small">
             This page shares a poster summary and non-confidential research outputs only. It does not include raw HDSS data, identifiable information, stakeholder transcripts, ethics documents or confidential governance materials.
           </p>
@@ -838,7 +846,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <div>© <span id="year"></span> William Dormechele · SENSS Poster Companion Page</div>
+      <div>© <span id="year"></span> William Dormechele · This is a personal academic companion page for a poster presented at the SENSS Annual Conference.</div>
       <div><a href="#top">Back to top</a></div>
     </div>
   </footer>
