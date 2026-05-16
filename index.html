@@ -135,6 +135,34 @@
       outline-offset: 3px;
     }
 
+    .menu-toggle {
+      display: none;
+      align-items: center;
+      gap: .45rem;
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--blue-dark);
+      border-radius: 999px;
+      padding: .55rem .78rem;
+      font-weight: 850;
+      cursor: pointer;
+      box-shadow: 0 8px 22px rgba(18, 32, 51, .08);
+    }
+
+    .menu-toggle:hover {
+      background: var(--soft-2);
+    }
+
+    .menu-toggle:focus-visible {
+      outline: 3px solid rgba(30, 111, 168, .28);
+      outline-offset: 3px;
+    }
+
+    .menu-toggle span:first-child {
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
     .hero {
       max-width: var(--max);
       margin: 0 auto;
@@ -524,12 +552,58 @@
     .footer-inner a { color: white; }
 
     @media (max-width: 920px) {
-      .hero, .section-head, .grid-2, .grid-3, .timeline, .figure-grid, .contact-card, .download-panel {
+      .hero,
+      .section-head,
+      .grid-2,
+      .grid-3,
+      .timeline,
+      .figure-grid,
+      .contact-card,
+      .download-panel {
         grid-template-columns: 1fr;
       }
-      .nav { align-items: flex-start; }
-      .nav-links { display: none; }
-      .hero { padding-top: 2.4rem; }
+
+      .nav {
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        flex: 1 1 auto;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        flex: 0 0 100%;
+        width: 100%;
+        margin-top: .7rem;
+        padding: .75rem;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: 18px;
+        box-shadow: 0 12px 34px rgba(18, 32, 51, .09);
+        flex-direction: column;
+        align-items: stretch;
+        gap: .45rem;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: .72rem .85rem;
+        background: var(--soft);
+      }
+
+      .hero {
+        padding-top: 1.8rem;
+      }
     }
 
     @media (max-width: 540px) {
@@ -554,7 +628,17 @@
           <span>Poster companion page . SENSS Annual Conference</span>
         </span>
       </a>
-      <div class="nav-links" aria-label="Page links">
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="primary-menu"
+      >
+        <span aria-hidden="true">☰</span>
+        <span class="menu-toggle-text">Menu</span>
+      </button>
+      <div class="nav-links" id="primary-menu" aria-label="Page links">
         <a href="#summary">Summary</a>
         <a href="#findings">Findings</a>
         <a href="#design">Next phase</a>
@@ -855,6 +939,21 @@
   // Update footer year automatically
   document.getElementById("year").textContent = new Date().getFullYear();
 
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navMenu = document.querySelector("#primary-menu");
+
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
+      );
+    });
+  }
+
   // Highlight the active navigation link when clicked or when scrolling
   const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
   const sections = navLinks
@@ -915,6 +1014,12 @@
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
       const sectionId = link.getAttribute("href").replace("#", "");
+
+      if (navMenu && menuToggle) {
+        navMenu.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation menu");
+      }
 
       setActiveLink(sectionId);
 
