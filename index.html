@@ -608,9 +608,22 @@
 
     @media (max-width: 540px) {
       .stat-grid { grid-template-columns: 1fr; }
+
       .brand img { width: 76px; }
-      .logo-row { align-items: flex-start; flex-direction: column; }
-      .logo-row img { max-width: 72%; }
+
+      .logo-row {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: .75rem;
+      }
+
+      .logo-row img {
+        max-width: 46%;
+        max-height: 58px;
+        object-fit: contain;
+      }
+
       .evidence-list { grid-template-columns: 1fr; }
     }
   </style>
